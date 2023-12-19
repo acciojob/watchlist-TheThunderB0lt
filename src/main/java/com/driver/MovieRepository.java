@@ -24,7 +24,7 @@ public class MovieRepository {
         return "Director added successfully";
     }
 
-    public String addDirectorPair(String movieName, String directorName) {
+    public String addMovieDirectorPair(String movieName, String directorName) {
         Movie movie = movieList.get(movieName);
         Director director = directorList.get(directorName);
         movieDirector.put(movie, director);

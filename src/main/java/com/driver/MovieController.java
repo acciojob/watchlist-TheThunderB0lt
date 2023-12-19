@@ -32,8 +32,8 @@ public class MovieController {
     //3. Pair an existing movie and director: PUT /movies/add-movie-director-pair
     @PostMapping("/add-movie-director-pair")
     //Controller Name - addMovieDirectorPair
-    public ResponseEntity<String> addDirectorPair(@RequestParam("movieName") String movieName, @RequestParam("directorName") String directorName) {
-        String ans = movieService.addDirectorPair(movieName, directorName);
+    public ResponseEntity<String> addMovieDirectorPair(@RequestParam("movieName") String movieName, @RequestParam("directorName") String directorName) {
+        String ans = movieService.addMovieDirectorPair(movieName, directorName);
         return new ResponseEntity<>(ans, HttpStatus.CREATED); //Return success message wrapped in a ResponseEntity object
     }
 
