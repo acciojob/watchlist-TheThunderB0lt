@@ -1,8 +1,5 @@
-package com.driver.Controller;
+package com.driver;
 
-import com.driver.Models.Director;
-import com.driver.Models.Movie;
-import com.driver.Service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +12,6 @@ import java.util.List;
 public class MovieController {
     @Autowired
     MovieService movieService;
-
-    //@RequestMapping(value = "/", method = RequestMethod.GET)
-    @GetMapping("/")
-    public String welcomePage() {
-        return "Welcome to Movie Watchlist Page!!";
-    }
 
     //1. Add a movie: POST /movies/add-movie
     @PostMapping("/add-movie")
